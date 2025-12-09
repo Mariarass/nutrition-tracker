@@ -1,0 +1,212 @@
+.productItem {
+  background: linear-gradient(135deg, #1a1f2e 0%, #252b3d 100%);
+  border-radius: 16px;
+  padding: 20px 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.productItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.selected {
+  border-color: #10b981;
+  background: linear-gradient(135deg, #1a2f2e 0%, #1f3d35 100%);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+}
+
+.productMain {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Custom Checkbox */
+.checkboxContainer {
+  position: relative;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.checkboxContainer:hover .checkmark {
+  border-color: #10b981;
+}
+
+.checkboxContainer input:checked ~ .checkmark {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxContainer input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkmark::after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 11px;
+  border: solid #0f172a;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+.productImage {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.productItem:hover .productImage {
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.productName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  flex-grow: 1;
+  letter-spacing: 0.02em;
+}
+
+/* Info Icon */
+.infoIcon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background: rgba(99, 102, 241, 0.2);
+  border: 2px solid rgba(99, 102, 241, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.infoIcon:hover {
+  background: rgba(99, 102, 241, 0.4);
+  border-color: #6366f1;
+  transform: scale(1.1);
+}
+
+.infoIcon span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #a5b4fc;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 12px;
+  width: 280px;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 0;
+  z-index: 1000;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: tooltipFadeIn 0.2s ease;
+  overflow: hidden;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltipHeader {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  padding: 14px 18px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+.tooltipContent {
+  padding: 14px 18px;
+}
+
+.tooltipRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tooltipRow:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.value {
+  color: #f1f5f9;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.priceRow {
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.priceValue {
+  color: #10b981;
+}
+
+
+
+
