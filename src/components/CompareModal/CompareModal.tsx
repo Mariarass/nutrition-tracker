@@ -34,9 +34,9 @@ export const CompareModal = ({ isOpen, onClose, selectedProducts, products }: Co
     .filter((p): p is Product => p !== undefined);
 
 
-  const getPer100g = (product: Product, nutrient: string): number => {
+  const getPer30g = (product: Product, nutrient: string): number => {
     const servingSize = product.servingSize;
-    const multiplier = 100 / servingSize;
+    const multiplier = 30 / servingSize;
     
     switch (nutrient) {
       case 'calories': return product.caloriesPerServing * multiplier;
@@ -50,7 +50,7 @@ export const CompareModal = ({ isOpen, onClose, selectedProducts, products }: Co
   };
 
   const getMinMax = (nutrient: string): { min: number; max: number } => {
-    const values = selectedProductsList.map(p => getPer100g(p, nutrient));
+    const values = selectedProductsList.map(p => getPer30g(p, nutrient));
     return {
       min: Math.min(...values),
       max: Math.max(...values),
@@ -93,7 +93,7 @@ export const CompareModal = ({ isOpen, onClose, selectedProducts, products }: Co
           <button className={styles.closeButton} onClick={onClose}>✕</button>
         </div>
         
-        <p className={styles.subtitle}>Values per 100g for fair comparison</p>
+        <p className={styles.subtitle}>Values per 30g for fair comparison</p>
         
         <div className={styles.tableContainer}>
           <table className={styles.table}>
@@ -120,7 +120,7 @@ export const CompareModal = ({ isOpen, onClose, selectedProducts, products }: Co
                     <span>{nutrient.label}</span>
                   </td>
                   {selectedProductsList.map(product => {
-                    const value = getPer100g(product, nutrient.key);
+                    const value = getPer30g(product, nutrient.key);
                     return (
                       <td 
                         key={product.id} 

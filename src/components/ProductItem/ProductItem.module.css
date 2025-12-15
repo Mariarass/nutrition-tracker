@@ -8,12 +8,6 @@
   z-index: 1;
 }
 
-.productItem:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  z-index: 100;
-}
-
 .selected {
   border-color: #10b981;
   background: linear-gradient(135deg, #1a2f2e 0%, #1f3d35 100%);
@@ -117,7 +111,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: help;
+  cursor: pointer;
   transition: all 0.2s ease;
   flex-shrink: 0;
 }
@@ -126,6 +120,16 @@
   background: rgba(99, 102, 241, 0.4);
   border-color: #6366f1;
   transform: scale(1.1);
+}
+
+.infoIconActive {
+  background: #6366f1;
+  border-color: #6366f1;
+  transform: scale(1.1);
+}
+
+.infoIconActive span {
+  color: white;
 }
 
 .infoIcon span {

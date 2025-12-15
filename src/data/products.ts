@@ -1,7 +1,7 @@
 import { Product } from '../types/product';
 
 export const products: Product[] = [
-  {
+  {//12$
     id: 0,
     name: "Walnuts",
     servingSize: 30,
@@ -10,11 +10,11 @@ export const products: Product[] = [
     proteinPerServing: 5,
     sugarPerServing: 1,
     fiberPerServing: 2,
-    price: 0.45,
+    price: 0.459,
     imageUrl: "https://m.media-amazon.com/images/I/41r2tNa17ZL._AC_UF894,1000_QL80_.jpg",
     category: 'nuts'
   },
-  {
+  {//8.9$
     id: 1,
     name: "Medjool Dates",
     servingSize: 40,
@@ -23,11 +23,11 @@ export const products: Product[] = [
     proteinPerServing: 1,
     sugarPerServing: 25,
     fiberPerServing: 3,
-    price: 0.45,
+    price: 0.39,
     imageUrl: "https://m.media-amazon.com/images/I/81lIcZ2PSOL._AC_UF894,1000_QL80_.jpg",
     category: 'fruits'
   },
-  {
+  {//8.99$
     id: 2,
     name: "Almonds",
     servingSize: 28,
@@ -36,7 +36,7 @@ export const products: Product[] = [
     proteinPerServing: 6,
     sugarPerServing: 1,
     fiberPerServing: 3,
-    price: 0.38,
+    price: 0.326,
     imageUrl: "https://nuts.com/images/ct/images.cdn.us-central1.gcp.commercetools.com/fe6ef66f-361c-4adb-b11f-d4aa8f13c79c/3004_RawAlmondsNoShe-Ke41eZKN-zoom.jpg",
     category: 'nuts'
   },
@@ -53,7 +53,7 @@ export const products: Product[] = [
     imageUrl: "https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2018/03/oats-701299_1920.jpg",
     category: 'other'
   },
-  {
+  {//9.99$
     id: 4,
     name: "Pumpkin seeds",
     servingSize: 30,
@@ -62,11 +62,11 @@ export const products: Product[] = [
     proteinPerServing: 8,
     sugarPerServing: 0,
     fiberPerServing: 2,
-    price: 0.55,
+    price: 0.48,
     imageUrl: "https://www.onceuponapumpkinrd.com/wp-content/uploads/2019/09/pumpkin-seeds.jpg",
     category: 'seeds'
   },
-  {
+  {//18.99$
     id: 5,
     name: "Mango",
     servingSize: 40,
@@ -75,11 +75,11 @@ export const products: Product[] = [
     proteinPerServing: 1,
     sugarPerServing: 24,
     fiberPerServing: 2,
-    price: 0.55,
+    price: 0.672,
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e4/%D0%9C%D0%B0%D0%BD%D0%B3%D0%BE_%D1%81%D1%83%D1%88%D0%B5%D0%BD%D0%BE%D0%B5.jpg",
     category: 'fruits'
   },
-  {
+  {//17.79$
     id: 6,
     name: "Cashews",
     servingSize: 28,
@@ -88,7 +88,7 @@ export const products: Product[] = [
     proteinPerServing: 5,
     sugarPerServing: 2,
     fiberPerServing: 0,
-    price: 0.55,
+    price: 0.44,
     imageUrl: "https://www.cashews.org/wp-content/uploads/2022/05/CONJUNT-FRUITS_0013_03-CASHEWS-1024x988-1.png",
     category: 'nuts'
   },
@@ -101,11 +101,11 @@ export const products: Product[] = [
     proteinPerServing: 1,
     sugarPerServing: 0,
     fiberPerServing: 2,
-    price: 0.55,
+    price: 0.147,
     imageUrl: "https://betterbodyfoods.com/wp-content/uploads/2019/06/CAC-01-RR-05-BG-GEN_Product_Front_V05.png",
     category: 'other'
   },
-  {
+  {//9.99
     id: 8,
     name: "Chia seeds",
     servingSize: 30,
@@ -114,11 +114,11 @@ export const products: Product[] = [
     proteinPerServing: 6,
     sugarPerServing: 0,
     fiberPerServing: 10,
-    price: 0.55,
+    price: 0.166,
     imageUrl: "https://assets.bonappetit.com/photos/57d6ce4f1844fc37461430ba/master/pass/chia-seeds.jpg",
     category: 'seeds'
   },
-  {
+  {//10.99
     id: 9,
     name: "Hemp seeds",
     servingSize: 30,
@@ -127,7 +127,7 @@ export const products: Product[] = [
     proteinPerServing: 10,
     sugarPerServing: 1,
     fiberPerServing: 1,
-    price: 0.55,
+    price: 0.363,
     imageUrl: "https://m.media-amazon.com/images/I/61AbTzHY3WL._AC_UF894,1000_QL80_.jpg",
     category: 'seeds'
   },
@@ -153,7 +153,7 @@ export const products: Product[] = [
     proteinPerServing: 6,
     sugarPerServing: 2,
     fiberPerServing: 3,
-    price: 0.55,
+    price: 1.24,
     imageUrl: "https://familyofnuts.com/cdn/shop/products/family-of-nuts-pistachios-3-1.jpg?v=1720725783",
     category: 'nuts'
   },
@@ -166,7 +166,7 @@ export const products: Product[] = [
     proteinPerServing: 3,
     sugarPerServing: 1,
     fiberPerServing: 2,
-    price: 0.55,
+    price: 0.13,
     imageUrl: "https://media.post.rvohealth.io/wp-content/uploads/2020/08/pecans-732x549-thumbnail.jpg",
     category: 'nuts'
   },
