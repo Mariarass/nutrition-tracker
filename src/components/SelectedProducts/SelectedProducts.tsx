@@ -39,11 +39,14 @@ export const SelectedProducts = ({ selectedProducts, products, onAmountChange, o
             </div>
             <div className={styles.amountInputContainer}>
               <input
-                type="number"
-                min="0"
-                step="1"
                 value={currentAmount}
-                onChange={(e) => onAmountChange(parseInt(id), parseFloat(e.target.value) || 0)}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  onAmountChange(
+                    Number(id),
+                    value === "" ? 0 : Number(value)
+                  );
+                }}
                 className={styles.amountInput}
               />
               <span className={styles.unit}>g</span>
