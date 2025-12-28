@@ -2,7 +2,7 @@ import { Product } from '../types/product';
 
 export const products: Product[] = [
   {//12$
-    id: 0,
+    id: 1,
     name: "Walnuts",
     servingSize: 30,
     caloriesPerServing: 200,
@@ -15,7 +15,7 @@ export const products: Product[] = [
     category: 'nuts'
   },
   {//8.9$
-    id: 1,
+    id: 2,
     name: "Medjool Dates",
     servingSize: 40,
     caloriesPerServing: 110,
@@ -28,7 +28,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {//8.99$
-    id: 2,
+    id: 3,
     name: "Almonds",
     servingSize: 28,
     caloriesPerServing: 170,
@@ -41,7 +41,7 @@ export const products: Product[] = [
     category: 'nuts'
   },
   {
-    id: 3,
+    id: 4,
     name: "Oats",
     servingSize: 40,
     caloriesPerServing: 150,
@@ -54,7 +54,7 @@ export const products: Product[] = [
     category: 'other'
   },
   {//9.99$
-    id: 4,
+    id: 5,
     name: "Pumpkin seeds",
     servingSize: 30,
     caloriesPerServing: 180,
@@ -67,7 +67,7 @@ export const products: Product[] = [
     category: 'seeds'
   },
   {//18.99$
-    id: 5,
+    id: 6,
     name: "Mango",
     servingSize: 40,
     caloriesPerServing: 140,
@@ -80,7 +80,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {//17.79$
-    id: 6,
+    id: 7,
     name: "Cashews",
     servingSize: 28,
     caloriesPerServing: 150,
@@ -93,7 +93,7 @@ export const products: Product[] = [
     category: 'nuts'
   },
   {
-    id: 7,
+    id: 8,
     name: "Cacao",
     servingSize: 5,
     caloriesPerServing: 20,
@@ -106,7 +106,7 @@ export const products: Product[] = [
     category: 'other'
   },
   {//9.99
-    id: 8,
+    id: 9,
     name: "Chia seeds",
     servingSize: 30,
     caloriesPerServing: 160,
@@ -119,7 +119,7 @@ export const products: Product[] = [
     category: 'seeds'
   },
   {//10.99
-    id: 9,
+    id: 10,
     name: "Hemp seeds",
     servingSize: 30,
     caloriesPerServing: 180,
@@ -132,7 +132,7 @@ export const products: Product[] = [
     category: 'seeds'
   },
   {
-    id: 10,
+    id: 11,
     name: "Sunflower seeds",
     servingSize: 33,
     caloriesPerServing: 190,
@@ -145,20 +145,47 @@ export const products: Product[] = [
     category: 'seeds'
   },
   {
-    id: 11,
-    name: "Pistachios",
-    servingSize: 30,
-    caloriesPerServing: 170,
-    fatPerServing: 14,
-    proteinPerServing: 6,
-    sugarPerServing: 2,
+    id: 12,
+    name: "Figs",
+    servingSize: 40,
+    caloriesPerServing: 130,
+    fatPerServing: 0,
+    proteinPerServing: 2,
+    sugarPerServing: 21,
     fiberPerServing: 3,
-    price: 1.24,
-    imageUrl: "https://familyofnuts.com/cdn/shop/products/family-of-nuts-pistachios-3-1.jpg?v=1720725783",
-    category: 'nuts'
+    price: 0.453,
+    imageUrl: "https://i5.walmartimages.com/seo/Happy-Village-Organic-Sun-Dried-Figs-2-5-lb_3f565ab3-9b33-4ff3-96fb-6477d567e16b.0cac9d5845aff0a01a0d69aae53f46ff.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF",
+    category: 'fruits'
+  },
+
+  {
+    id: 13,
+    name: "Raisins",
+    servingSize: 40,
+    caloriesPerServing: 120,
+    fatPerServing: 0,
+    proteinPerServing: 1,
+    sugarPerServing: 26,
+    fiberPerServing: 2,
+    price: 0.244,
+    imageUrl: "https://i5.walmartimages.com/seo/Sun-Maid-Organic-California-Sun-Dried-Raisins-2-Pack-32-Oz-Resealable-Bag-Organic-Dried-Fruit-Snack-For-Lunches-Snacks-And-Natural-Sweeteners_8a2507ed-3688-4da3-861e-10895c106d0e.10de5492070694389c844faabdb111bc.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF",
+    category: 'fruits'
   },
   {
-    id: 12,
+    id: 14,
+    name: "Raw organic bee honey",
+    servingSize: 21,
+    caloriesPerServing: 70,
+    fatPerServing: 0,
+    proteinPerServing: 0,
+    sugarPerServing: 13,
+    fiberPerServing: 0,
+    price: 0.206,
+    imageUrl: "https://us.nuxe.com/cdn/shop/articles/mag-1200x672-what-are-the-virtues-of-honey-and-other-treasures-of-the-hive-1.jpg?v=1751244173&width=2048",
+    category: 'sweeteners'
+  },
+  {
+    id: 15,
     name: "Pecans",
     servingSize: 30,
     caloriesPerServing: 220,
@@ -171,7 +198,7 @@ export const products: Product[] = [
     category: 'nuts'
   },
   {
-    id: 13,
+    id: 16,
     name: "Sesame seeds",
     servingSize: 28,
     caloriesPerServing: 169,
@@ -184,7 +211,7 @@ export const products: Product[] = [
     category: 'seeds'
   },
   {
-    id: 14,
+    id: 17,
     name: "Deglet Noor Dates",
     servingSize: 40,
     caloriesPerServing: 110,
@@ -197,7 +224,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 15,
+    id: 18,
     name: "Cacao Nibs",
     servingSize: 3,
     caloriesPerServing: 20,
@@ -209,21 +236,9 @@ export const products: Product[] = [
     imageUrl: "https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/cacao-nibs-1296x728-feature_0.jpg?w=1155&h=1528",
     category: 'other'
   },
+
   {
-    id: 16,
-    name: "Raw organic bee honey",
-    servingSize: 21,
-    caloriesPerServing: 70,
-    fatPerServing: 0,
-    proteinPerServing: 0,
-    sugarPerServing: 13,
-    fiberPerServing: 0,
-    price: 0.55,
-    imageUrl: "https://us.nuxe.com/cdn/shop/articles/mag-1200x672-what-are-the-virtues-of-honey-and-other-treasures-of-the-hive-1.jpg?v=1751244173&width=2048",
-    category: 'sweeteners'
-  },
-  {
-    id: 17,
+    id: 19,
     name: "Organic shredded coconut",
     servingSize: 15,
     caloriesPerServing: 100,
@@ -236,7 +251,7 @@ export const products: Product[] = [
     category: 'other'
   },
   {
-    id: 18,
+    id: 20,
     name: "Brazil nuts",
     servingSize: 28,
     caloriesPerServing: 200,
@@ -249,20 +264,20 @@ export const products: Product[] = [
     category: 'nuts'
   },
   {
-    id: 19,
+    id: 21,
     name: "Dried blueberries",
     servingSize: 33,
     caloriesPerServing: 120,
-    fatPerServing: 19,
-    proteinPerServing: 4,
-    sugarPerServing: 0,
-    fiberPerServing: 2,
+    fatPerServing:0,
+    proteinPerServing: 0,
+    sugarPerServing: 14,
+    fiberPerServing: 3,
     price: 0.55,
     imageUrl: "https://i5.walmartimages.com/seo/I-M-A-NUT-American-Whole-Dried-Blueberries-Kosher-16-oz_864b63b7-cac9-46c6-bf41-efe762e23ae6.7bcd27a286c1a20db88fcf46f70e9819.jpeg",
     category: 'fruits'
   },
   {
-    id: 20,
+    id: 22,
     name: "Dried yellow peaches",
     servingSize: 28,
     caloriesPerServing: 87,
@@ -275,7 +290,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 21,
+    id: 23,
     name: "Dried papaya",
     servingSize: 40,
     caloriesPerServing: 100,
@@ -288,7 +303,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 23,
+    id: 24,
     name: "Dried sweet (Bing) cherries",
     servingSize: 28,
     caloriesPerServing: 90,
@@ -301,12 +316,12 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 24,
+    id: 25,
     name: "Dried tart sour cherries",
     servingSize: 40,
     caloriesPerServing: 100,
     fatPerServing: 0.2,
-    proteinPerServing: 4,
+    proteinPerServing: 2.1,
     sugarPerServing: 14.2,
     fiberPerServing: 3.4,
     price: 0.55,
@@ -314,7 +329,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   { 
-    id: 25,
+    id: 26,
     name: "Dried apples",
     servingSize: 40,
     caloriesPerServing: 142,
@@ -327,7 +342,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 26,
+    id: 27,
     name: "Banana chips (no coconut oil)",
     servingSize: 28,
     caloriesPerServing: 97,
@@ -340,7 +355,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 27,
+    id: 28,
     name: "Banana chips (with coconut oil)",
     servingSize: 28,
     caloriesPerServing: 160,
@@ -353,20 +368,20 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 28,
-    name: "Dried Turkish (Smyrna) figs",
-    servingSize: 40,
-    caloriesPerServing: 101,
-    fatPerServing: 0.4,
-    proteinPerServing: 1.3,
-    sugarPerServing: 19.4,
-    fiberPerServing: 4,
-    price: 0.55,
-    imageUrl: "https://www.gourmetfoodworld.com/images/Product/medium/dried-figs-golden-calimyrna-1S-1819.jpg",
-    category: 'fruits'
+    id: 29,
+    name: "Pistachios",
+    servingSize: 30,
+    caloriesPerServing: 170,
+    fatPerServing: 14,
+    proteinPerServing: 6,
+    sugarPerServing: 2,
+    fiberPerServing: 3,
+    price: 1.24,
+    imageUrl: "https://familyofnuts.com/cdn/shop/products/family-of-nuts-pistachios-3-1.jpg?v=1720725783",
+    category: 'nuts'
   },
   {
-    id: 29,
+    id: 30,
     name: "Dried and pitted plums",
     servingSize: 40,
     caloriesPerServing: 110,
@@ -379,7 +394,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 30,
+    id: 31,
     name: "Dried and pitted prunes",
     servingSize: 40,
     caloriesPerServing: 96,
@@ -392,7 +407,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 31,
+    id: 32,
     name: "Dried apricots",
     servingSize: 40,
     caloriesPerServing: 95,
@@ -405,7 +420,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 32,
+    id: 33,
     name: "Dried Turkish apricots",
     servingSize: 40,
     caloriesPerServing: 96,
@@ -418,7 +433,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 33,
+    id: 34,
     name: "Dried oranges (California)",
     servingSize: 40,
     caloriesPerServing: 130,
@@ -431,7 +446,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   { 
-    id: 34,
+    id: 35,
     name: "Dried lemons",
     servingSize: 40,
     caloriesPerServing: 100,
@@ -444,7 +459,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 35,
+    id: 36,
     name: "Dried limes",
     servingSize: 40,
     caloriesPerServing: 114,
@@ -457,7 +472,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 36,
+    id: 37,
     name: "Dried pears",  
     servingSize: 40,
     caloriesPerServing: 100,
@@ -470,7 +485,7 @@ export const products: Product[] = [
     category: 'fruits'
   },
   {
-    id: 37,
+    id: 38,
     name: "Raw hazelnuts",
     servingSize: 28,
     caloriesPerServing: 177,
@@ -483,7 +498,7 @@ export const products: Product[] = [
     category: 'nuts'
   },
   { 
-    id: 38,
+    id: 39,
     name: "Macadamia nuts",
     servingSize: 28,
     caloriesPerServing: 200,
@@ -495,19 +510,7 @@ export const products: Product[] = [
     imageUrl: "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/3013_RawMacadamiaNut-h-BVRqDE-zoom.jpg",
     category: 'nuts'
   },
-  {
-    id: 39,
-    name: "Thompson raisins (California)",
-    servingSize: 40,
-    caloriesPerServing: 121,
-    fatPerServing: 0,
-    proteinPerServing: 1.2,
-    sugarPerServing: 23.9,
-    fiberPerServing: 1.6,
-    price: 0.55,
-    imageUrl: "https://www.bellavivawholesale.com/cdn/shop/products/thompson-raisins-organic_18415155-60b3-4f40-b3df-5b79381db0dd.jpg?v=1681320930",
-    category: 'fruits'
-  },
+
   { 
     id: 40,
     name: "Dried red flame seedless raisins",

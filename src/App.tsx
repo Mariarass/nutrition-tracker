@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { products, categoryLabels } from './data/products';
 import { ProductItem } from './components/ProductItem';
 import { SelectedProducts } from './components/SelectedProducts';
@@ -14,6 +14,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [isCompareModalOpen, setIsCompareModalOpen] = useState<boolean>(false);
   const [selectedCategories, setSelectedCategories] = useState<ProductCategory[]>([]);
+  const selectedSectionRef = useRef<HTMLElement>(null);
 
   const toggleCategory = (category: ProductCategory) => {
     setSelectedCategories(prev => 
@@ -69,6 +70,16 @@ function App() {
       delete newSelected[productId];
       return newSelected;
     });
+  };
+
+  const handleClearAll = (): void => {
+    setSelectedProducts({});
+  };
+
+  const scrollToSelected = (): void => {
+    if (selectedSectionRef.current) {
+      selectedSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   const calculateTotals = (): NutritionTotals => {
@@ -166,7 +177,7 @@ function App() {
         </section>
 
         {hasSelectedProducts && (
-          <section className={styles.selectedSection}>
+          <section ref={selectedSectionRef} className={styles.selectedSection}>
             <div className={styles.selectedHeader}>
               <h2 className={styles.sectionTitle}>✅ Selected Products</h2>
               {Object.keys(selectedProducts).length >= 2 && (
@@ -195,6 +206,25 @@ function App() {
           products={products}
         />
       </main>
+
+      {hasSelectedProducts && (
+        <div className={styles.fixedButtons}>
+          <button 
+            className={styles.scrollToSelectedButton}
+            onClick={scrollToSelected}
+            title="Scroll to selected products"
+          >
+            Scroll to nutrition
+          </button>
+          <button 
+            className={styles.clearSelectedButton}
+            onClick={handleClearAll}
+            title="Clear selected products"
+          >
+            Clear selected
+          </button>
+        </div>
+      )}
     </div>
   );
 }
