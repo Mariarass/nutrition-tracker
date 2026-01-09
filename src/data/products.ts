@@ -62,7 +62,7 @@ export const products: Product[] = [
     proteinPerServing:9,
     sugarPerServing: 0,
     fiberPerServing: 2,
-    price: 0.296,
+    price: 0.43,
     imageUrl: "https://www.onceuponapumpkinrd.com/wp-content/uploads/2019/09/pumpkin-seeds.jpg",
     category: 'seeds'
   },
@@ -186,42 +186,44 @@ export const products: Product[] = [
   },
   {
     id: 15,
-    name: "Pecans",
-    servingSize: 30,
-    caloriesPerServing: 220,
-    fatPerServing: 21,
-    proteinPerServing: 3,
-    sugarPerServing: 1,
+    name: "Pineapple",
+    servingSize: 40,
+    caloriesPerServing: 140,
+    fatPerServing: 1,
+    proteinPerServing: 1,
+    sugarPerServing: 28,
     fiberPerServing: 2,
-    price: 0.13,
-    imageUrl: "https://media.post.rvohealth.io/wp-content/uploads/2020/08/pecans-732x549-thumbnail.jpg",
-    category: 'nuts'
+    price: 0.78,
+    imageUrl: "https://s3.amazonaws.com/grocery-project/product_images/kirkland-signature-organic-dri-8420499-13134305.jpg",
+    category: 'fruits'
   },
+  
   {
     id: 16,
-    name: "Sesame seeds",
-    servingSize: 28,
-    caloriesPerServing: 169,
-    fatPerServing: 14,
-    proteinPerServing: 5,
-    sugarPerServing: 0,
+    name: "Peanut Butter",
+    servingSize: 32,
+    caloriesPerServing: 190,
+    fatPerServing: 16,
+    proteinPerServing: 8,
+    sugarPerServing: 2,
     fiberPerServing: 3,
     price: 0.55,
-    imageUrl: "https://www.onegreenplanet.org/wp-content/uploads/2013/10/Sesame-Seeds-Health-Benefits-Tips-and-Recipes.jpg",
-    category: 'seeds'
+    imageUrl: "https://addictedtodates.com/wp-content/uploads/2023/02/homemade-peanut-butter.jpg",
+    category: 'other'
   },
+
   {
     id: 17,
-    name: "Deglet Noor Dates",
-    servingSize: 40,
-    caloriesPerServing: 110,
-    fatPerServing: 0,
-    proteinPerServing: 1,
-    sugarPerServing: 25,
-    fiberPerServing: 3,
+    name: "Pumpkin protein",
+    servingSize: 15,
+    caloriesPerServing: 60,
+    fatPerServing: 1.5,
+    proteinPerServing: 9,
+    sugarPerServing: 0,
+    fiberPerServing: 0,
     price: 0.55,
-    imageUrl: "https://m.media-amazon.com/images/I/81VFu5uhy3L._AC_UF350,350_QL80_.jpg",
-    category: 'fruits'
+    imageUrl: "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/bog/bog03588/y/8.jpg",
+    category: 'other'
   },
   {
     id: 18,
@@ -510,9 +512,21 @@ export const products: Product[] = [
     imageUrl: "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/3013_RawMacadamiaNut-h-BVRqDE-zoom.jpg",
     category: 'nuts'
   },
-
+  {
+    id:40,
+    name: "Pecans",
+    servingSize: 30,
+    caloriesPerServing: 220,
+    fatPerServing: 21,
+    proteinPerServing: 3,
+    sugarPerServing: 1,
+    fiberPerServing: 2,
+    price: 0.13,
+    imageUrl: "https://media.post.rvohealth.io/wp-content/uploads/2020/08/pecans-732x549-thumbnail.jpg",
+    category: 'nuts'
+  },
   { 
-    id: 40,
+    id: 41,
     name: "Dried red flame seedless raisins",
     servingSize: 40,
     caloriesPerServing: 120,
@@ -522,6 +536,34 @@ export const products: Product[] = [
     fiberPerServing: 2,
     price: 0.55,
     imageUrl: "https://nutsite.com/wp-content/uploads/2020/01/3113-Img-Red-Flame-Raisins-2.jpg",
+    category: 'fruits'
+  },
+
+  {
+    id: 42,
+    name: "Sesame seeds",
+    servingSize: 28,
+    caloriesPerServing: 169,
+    fatPerServing: 14,
+    proteinPerServing: 5,
+    sugarPerServing: 0,
+    fiberPerServing: 3,
+    price: 0.55,
+    imageUrl: "https://www.onegreenplanet.org/wp-content/uploads/2013/10/Sesame-Seeds-Health-Benefits-Tips-and-Recipes.jpg",
+    category: 'seeds'
+  },
+   
+  {
+    id: 43,
+    name: "Deglet Noor Dates",
+    servingSize: 40,
+    caloriesPerServing: 110,
+    fatPerServing: 0,
+    proteinPerServing: 1,
+    sugarPerServing: 25,
+    fiberPerServing: 3,
+    price: 0.55,
+    imageUrl: "https://m.media-amazon.com/images/I/81VFu5uhy3L._AC_UF350,350_QL80_.jpg",
     category: 'fruits'
   },
 ];
