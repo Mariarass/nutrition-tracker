@@ -254,16 +254,16 @@ export const products: Product[] = [
   },
   {
     id: 20,
-    name: "Brazil nuts",
-    servingSize: 28,
-    caloriesPerServing: 200,
-    fatPerServing: 19,
-    proteinPerServing: 4,
-    sugarPerServing: 0,
+    name: "Chocolate",
+    servingSize: 15,
+    caloriesPerServing:80,
+    fatPerServing: 5,
+    proteinPerServing: 1,
+    sugarPerServing: 4,
     fiberPerServing: 2,
     price: 0.55,
-    imageUrl: "https://karibafarms.com/wp-content/uploads/2020/03/Brazil-Nuts.jpg",
-    category: 'nuts'
+    imageUrl: "https://unboundwellness.com/wp-content/uploads/2024/03/coconut_milk_chocolate_3.jpg",
+    category: 'other'
   },
   {
     id: 21,
@@ -565,6 +565,19 @@ export const products: Product[] = [
     price: 0.55,
     imageUrl: "https://m.media-amazon.com/images/I/81VFu5uhy3L._AC_UF350,350_QL80_.jpg",
     category: 'fruits'
+  },
+  {
+    id: 44,
+    name: "Brazil nuts",
+    servingSize: 28,
+    caloriesPerServing: 200,
+    fatPerServing: 19,
+    proteinPerServing: 4,
+    sugarPerServing: 0,
+    fiberPerServing: 2,
+    price: 0.55,
+    imageUrl: "https://karibafarms.com/wp-content/uploads/2020/03/Brazil-Nuts.jpg",
+    category: 'nuts'
   },
 ];
 
