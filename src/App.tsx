@@ -9,11 +9,16 @@ import styles from './App.module.css';
 
 const allCategories: ProductCategory[] = ['nuts', 'seeds', 'fruits', 'sweeteners', 'other'];
 
+const CONTAINER_PRODUCT_ID = 45;
+const STICKERS_PRODUCT_ID = 46;
+
 function App() {
   const [selectedProducts, setSelectedProducts] = useState<SelectedProductsType>({});
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [isCompareModalOpen, setIsCompareModalOpen] = useState<boolean>(false);
   const [selectedCategories, setSelectedCategories] = useState<ProductCategory[]>([]);
+  const [includeContainerInCost, setIncludeContainerInCost] = useState<boolean>(false);
+  const [includeStickersInCost, setIncludeStickersInCost] = useState<boolean>(false);
   const selectedSectionRef = useRef<HTMLElement>(null);
 
   const toggleCategory = (category: ProductCategory) => {
@@ -25,7 +30,7 @@ function App() {
   };
 
   const filteredProducts = useMemo(() => {
-    let filtered = products;
+    let filtered = products.filter(p => p.category !== 'packaging');
     
     // Filter by category if any selected
     if (selectedCategories.length > 0) {
@@ -90,7 +95,8 @@ function App() {
       protein: 0,
       sugar: 0,
       fiber: 0,
-      price: 0
+      price: 0,
+      totalBestPrice: 0
     };
 
     Object.entries(selectedProducts).forEach(([productId, grams]) => {
@@ -104,8 +110,24 @@ function App() {
         totals.sugar += product.sugarPerServing * multiplier;
         totals.fiber += product.fiberPerServing * multiplier;
         totals.price += product.price * multiplier;
+        totals.totalBestPrice += product.bestPrice * multiplier;
       }
     });
+
+    if (includeContainerInCost) {
+      const container = products.find(p => p.id === CONTAINER_PRODUCT_ID);
+      if (container) {
+        totals.price += container.price;
+        totals.totalBestPrice += container.bestPrice;
+      }
+    }
+    if (includeStickersInCost) {
+      const stickers = products.find(p => p.id === STICKERS_PRODUCT_ID);
+      if (stickers) {
+        totals.price += stickers.price;
+        totals.totalBestPrice += stickers.bestPrice;
+      }
+    }
 
     return totals;
   };
@@ -195,7 +217,16 @@ function App() {
               onAmountChange={handleAmountChange}
               onRemove={handleRemoveProduct}
             />
-            <NutritionSummary totals={totals} />
+            <NutritionSummary
+              totals={totals}
+              selectedProducts={selectedProducts}
+              products={products}
+              packagingProducts={products.filter(p => p.category === 'packaging')}
+              includeContainerInCost={includeContainerInCost}
+              includeStickersInCost={includeStickersInCost}
+              onIncludeContainerChange={setIncludeContainerInCost}
+              onIncludeStickersChange={setIncludeStickersInCost}
+            />
           </section>
         )}
 

@@ -139,9 +139,27 @@ export const ProductItem = ({ product, isSelected, onToggle }: ProductItemProps)
               <Row label="Fiber" value={`${product.fiberPerServing} g`} />
 
               <div className={`${styles.tooltipRow} ${styles.priceRow}`}>
-                <span className={styles.label}>Price per serving:</span>
+                <span className={styles.label}>Current price per serving:</span>
                 <span className={styles.priceValue}>
                   ${product.price.toFixed(2)}
+                </span>
+              </div>
+              <div className={styles.tooltipRow}>
+                <span className={styles.label}>Best price per serving:</span>
+                <span className={styles.value}>
+                  ${product.bestPrice.toFixed(2)}
+                </span>
+              </div>
+              <div className={styles.tooltipRow}>
+                <span className={styles.label}>Current price per lb:</span>
+                <span className={styles.value}>
+                  ${pricePerPound(product.price, product.servingSize).toFixed(2)}/lb
+                </span>
+              </div>
+              <div className={styles.tooltipRow}>
+                <span className={styles.label}>Best price per lb:</span>
+                <span className={styles.value}>
+                  ${pricePerPound(product.bestPrice, product.servingSize).toFixed(2)}/lb
                 </span>
               </div>
             </div>
@@ -151,6 +169,11 @@ export const ProductItem = ({ product, isSelected, onToggle }: ProductItemProps)
     </>
   );
 };
+
+const GRAMS_PER_POUND = 453.592;
+
+const pricePerPound = (pricePerServing: number, servingSize: number) =>
+  (pricePerServing / servingSize) * GRAMS_PER_POUND;
 
 const Row = ({ label, value }: { label: string; value: string }) => (
   <div className={styles.tooltipRow}>

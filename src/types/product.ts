@@ -1,4 +1,4 @@
-export type ProductCategory = 'nuts' | 'seeds' | 'fruits' | 'sweeteners' | 'other';
+export type ProductCategory = 'nuts' | 'seeds' | 'fruits' | 'sweeteners' | 'other' | 'packaging';
 
 export interface Product {
   id: number;
@@ -9,7 +9,10 @@ export interface Product {
   proteinPerServing: number;
   sugarPerServing: number;
   fiberPerServing: number;
+  /** Current price per serving ($) */
   price: number;
+  /** Best (lowest) price per serving ($) */
+  bestPrice: number;
   imageUrl: string;
   category: ProductCategory;
 }
@@ -25,6 +28,9 @@ export interface NutritionTotals {
   protein: number;
   sugar: number;
   fiber: number;
+  /** Total cost at current prices */
   price: number;
+  /** Total cost at best prices */
+  totalBestPrice: number;
 }
 

@@ -11,6 +11,7 @@ export const products: Product[] = [
     sugarPerServing: 1,
     fiberPerServing: 2,
     price: 0.459,
+    bestPrice: 0.41,
     imageUrl: "https://m.media-amazon.com/images/I/41r2tNa17ZL._AC_UF894,1000_QL80_.jpg",
     category: 'nuts'
   },
@@ -24,6 +25,7 @@ export const products: Product[] = [
     sugarPerServing: 25,
     fiberPerServing: 3,
     price: 0.39,
+    bestPrice: 0.39,
     imageUrl: "https://m.media-amazon.com/images/I/81lIcZ2PSOL._AC_UF894,1000_QL80_.jpg",
     category: 'fruits'
   },
@@ -37,6 +39,7 @@ export const products: Product[] = [
     sugarPerServing: 1,
     fiberPerServing: 3,
     price: 0.326,
+    bestPrice: 0.326,
     imageUrl: "https://nuts.com/images/ct/images.cdn.us-central1.gcp.commercetools.com/fe6ef66f-361c-4adb-b11f-d4aa8f13c79c/3004_RawAlmondsNoShe-Ke41eZKN-zoom.jpg",
     category: 'nuts'
   },
@@ -50,6 +53,7 @@ export const products: Product[] = [
     sugarPerServing: 1,
     fiberPerServing: 4,
     price: 0.12,
+    bestPrice: 0.10,
     imageUrl: "https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2018/03/oats-701299_1920.jpg",
     category: 'other'
   },
@@ -62,7 +66,8 @@ export const products: Product[] = [
     proteinPerServing:9,
     sugarPerServing: 0,
     fiberPerServing: 2,
-    price: 0.43,
+    price: 0.28,
+    bestPrice: 0.28,
     imageUrl: "https://www.onceuponapumpkinrd.com/wp-content/uploads/2019/09/pumpkin-seeds.jpg",
     category: 'seeds'
   },
@@ -76,6 +81,7 @@ export const products: Product[] = [
     sugarPerServing: 24,
     fiberPerServing: 2,
     price: 0.672,
+    bestPrice: 0.67,
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e4/%D0%9C%D0%B0%D0%BD%D0%B3%D0%BE_%D1%81%D1%83%D1%88%D0%B5%D0%BD%D0%BE%D0%B5.jpg",
     category: 'fruits'
   },
@@ -89,6 +95,7 @@ export const products: Product[] = [
     sugarPerServing: 2,
     fiberPerServing: 0,
     price: 0.44,
+    bestPrice: 0.44,
     imageUrl: "https://www.cashews.org/wp-content/uploads/2022/05/CONJUNT-FRUITS_0013_03-CASHEWS-1024x988-1.png",
     category: 'nuts'
   },
@@ -102,6 +109,7 @@ export const products: Product[] = [
     sugarPerServing: 0,
     fiberPerServing: 2,
     price: 0.147,
+    bestPrice: 0.147,
     imageUrl: "https://betterbodyfoods.com/wp-content/uploads/2019/06/CAC-01-RR-05-BG-GEN_Product_Front_V05.png",
     category: 'other'
   },
@@ -115,6 +123,7 @@ export const products: Product[] = [
     sugarPerServing: 0,
     fiberPerServing: 10,
     price: 0.166,
+    bestPrice: 0.166,
     imageUrl: "https://assets.bonappetit.com/photos/57d6ce4f1844fc37461430ba/master/pass/chia-seeds.jpg",
     category: 'seeds'
   },
@@ -128,6 +137,7 @@ export const products: Product[] = [
     sugarPerServing: 1,
     fiberPerServing: 1,
     price: 0.363,
+    bestPrice: 0.36,
     imageUrl: "https://m.media-amazon.com/images/I/61AbTzHY3WL._AC_UF894,1000_QL80_.jpg",
     category: 'seeds'
   },
@@ -141,6 +151,7 @@ export const products: Product[] = [
     sugarPerServing: 1,
     fiberPerServing: 7,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://m.media-amazon.com/images/I/61EuHk70+oL._AC_UF894,1000_QL80_.jpg",
     category: 'seeds'
   },
@@ -154,6 +165,7 @@ export const products: Product[] = [
     sugarPerServing: 21,
     fiberPerServing: 3,
     price: 0.453,
+    bestPrice: 0.453,
     imageUrl: "https://i5.walmartimages.com/seo/Happy-Village-Organic-Sun-Dried-Figs-2-5-lb_3f565ab3-9b33-4ff3-96fb-6477d567e16b.0cac9d5845aff0a01a0d69aae53f46ff.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF",
     category: 'fruits'
   },
@@ -168,6 +180,7 @@ export const products: Product[] = [
     sugarPerServing: 26,
     fiberPerServing: 2,
     price: 0.244,
+    bestPrice: 0.244,
     imageUrl: "https://i5.walmartimages.com/seo/Sun-Maid-Organic-California-Sun-Dried-Raisins-2-Pack-32-Oz-Resealable-Bag-Organic-Dried-Fruit-Snack-For-Lunches-Snacks-And-Natural-Sweeteners_8a2507ed-3688-4da3-861e-10895c106d0e.10de5492070694389c844faabdb111bc.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF",
     category: 'fruits'
   },
@@ -181,6 +194,7 @@ export const products: Product[] = [
     sugarPerServing: 13,
     fiberPerServing: 0,
     price: 0.206,
+    bestPrice: 0.19,
     imageUrl: "https://us.nuxe.com/cdn/shop/articles/mag-1200x672-what-are-the-virtues-of-honey-and-other-treasures-of-the-hive-1.jpg?v=1751244173&width=2048",
     category: 'sweeteners'
   },
@@ -194,6 +208,7 @@ export const products: Product[] = [
     sugarPerServing: 28,
     fiberPerServing: 2,
     price: 0.78,
+    bestPrice: 0.56,
     imageUrl: "https://s3.amazonaws.com/grocery-project/product_images/kirkland-signature-organic-dri-8420499-13134305.jpg",
     category: 'fruits'
   },
@@ -207,7 +222,8 @@ export const products: Product[] = [
     proteinPerServing: 8,
     sugarPerServing: 2,
     fiberPerServing: 3,
-    price: 0.55,
+    price: 0.59,
+    bestPrice: 0.33,
     imageUrl: "https://addictedtodates.com/wp-content/uploads/2023/02/homemade-peanut-butter.jpg",
     category: 'other'
   },
@@ -222,6 +238,7 @@ export const products: Product[] = [
     sugarPerServing: 0,
     fiberPerServing: 0,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/bog/bog03588/y/8.jpg",
     category: 'other'
   },
@@ -234,7 +251,8 @@ export const products: Product[] = [
     proteinPerServing: 0,
     sugarPerServing: 0,
     fiberPerServing: 1,
-    price: 0.55,
+    price: 0.19 ,
+    bestPrice: 0.14,
     imageUrl: "https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/cacao-nibs-1296x728-feature_0.jpg?w=1155&h=1528",
     category: 'other'
   },
@@ -249,6 +267,7 @@ export const products: Product[] = [
     sugarPerServing: 0,
     fiberPerServing: 2,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://www.znaturalfoods.com/cdn-cgi/image/width=828/https://r2.znaturalfoods.com/product-images/4455064797321/1762442960009-pthyiiuy.webp",
     category: 'other'
   },
@@ -262,6 +281,7 @@ export const products: Product[] = [
     sugarPerServing: 4,
     fiberPerServing: 2,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://unboundwellness.com/wp-content/uploads/2024/03/coconut_milk_chocolate_3.jpg",
     category: 'other'
   },
@@ -269,12 +289,13 @@ export const products: Product[] = [
     id: 21,
     name: "Dried blueberries",
     servingSize: 33,
-    caloriesPerServing: 120,
-    fatPerServing:0,
+    caloriesPerServing: 96,
+    fatPerServing:0.45,
     proteinPerServing: 0,
-    sugarPerServing: 14,
-    fiberPerServing: 3,
-    price: 0.55,
+    sugarPerServing: 16.5,
+    fiberPerServing:2.4,
+    price: 1.08,
+    bestPrice: 0.97,
     imageUrl: "https://i5.walmartimages.com/seo/I-M-A-NUT-American-Whole-Dried-Blueberries-Kosher-16-oz_864b63b7-cac9-46c6-bf41-efe762e23ae6.7bcd27a286c1a20db88fcf46f70e9819.jpeg",
     category: 'fruits'
   },
@@ -288,6 +309,7 @@ export const products: Product[] = [
     sugarPerServing: 8,
     fiberPerServing: 3,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://sigonas.com/cdn/shop/files/jumboyellowpeaches.png?v=1695158335&width=1214",
     category: 'fruits'
   },
@@ -301,6 +323,7 @@ export const products: Product[] = [
     sugarPerServing: 16,
     fiberPerServing: 4,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/d4802e5736094bc4.cro-2M5dKaom-zoom.jpg",
     category: 'fruits'
   },
@@ -314,6 +337,7 @@ export const products: Product[] = [
     sugarPerServing: 15,
     fiberPerServing: 1,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://arnettfarms.com/wp-content/uploads/2019/11/Bing-Cherry-Dried-Fruit-1.jpg",
     category: 'fruits'
   },
@@ -327,6 +351,7 @@ export const products: Product[] = [
     sugarPerServing: 14.2,
     fiberPerServing: 3.4,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4N8i1leZkD_Kp_v6Rl0u99wM1BB5HVxatIg&s",
     category: 'fruits'
   },
@@ -340,19 +365,21 @@ export const products: Product[] = [
     sugarPerServing: 29,
     fiberPerServing: 0,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://nuts.com/images/ct/images.cdn.us-central1.gcp.commercetools.com/fe6ef66f-361c-4adb-b11f-d4aa8f13c79c/1513%20Organic%20Dried%20A-fsi9DS2U-zoom.jpg",
     category: 'fruits'
   },
   {
     id: 27,
-    name: "Banana chips (no coconut oil)",
-    servingSize: 28,
+    name: "Dried Bananas",
+    servingSize: 40,
     caloriesPerServing: 97,
     fatPerServing: 0,
     proteinPerServing: 1,
     sugarPerServing: 13,
     fiberPerServing: 1,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://thebigmansworld.com/wp-content/uploads/2024/07/banana-chips-4.jpg",
     category: 'fruits'
   },
@@ -366,6 +393,7 @@ export const products: Product[] = [
     sugarPerServing: 0,
     fiberPerServing: 1,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://thebigmansworld.com/wp-content/uploads/2024/07/banana-chips-4.jpg",
     category: 'fruits'
   },
@@ -379,6 +407,7 @@ export const products: Product[] = [
     sugarPerServing: 2,
     fiberPerServing: 3,
     price: 1.24,
+    bestPrice: 1.12,
     imageUrl: "https://familyofnuts.com/cdn/shop/products/family-of-nuts-pistachios-3-1.jpg?v=1720725783",
     category: 'nuts'
   },
@@ -392,6 +421,7 @@ export const products: Product[] = [
     sugarPerServing: 13,
     fiberPerServing: 2,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://i.etsystatic.com/23784133/r/il/f4fc46/3021410872/il_570xN.3021410872_dz36.jpg",
     category: 'fruits'
   },
@@ -405,6 +435,7 @@ export const products: Product[] = [
     sugarPerServing: 15,
     fiberPerServing: 3,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://m.media-amazon.com/images/I/71C4ZN3+GZL._AC_UF894,1000_QL80_.jpg",
     category: 'fruits'
   },
@@ -418,6 +449,7 @@ export const products: Product[] = [
     sugarPerServing: 15,
     fiberPerServing: 3,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://m.media-amazon.com/images/I/61sVTMx0bYL._AC_UF894,1000_QL80_.jpg",
     category: 'fruits'
   },
@@ -431,6 +463,7 @@ export const products: Product[] = [
     sugarPerServing: 21,
     fiberPerServing: 3,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://nuts.com/images/ct/images.cdn.us-central1.gcp.commercetools.com/fe6ef66f-361c-4adb-b11f-d4aa8f13c79c/Organic%20Turkish%20Apri-sPvw6nYZ-zoom.jpg",
     category: 'fruits'
   },
@@ -444,6 +477,7 @@ export const products: Product[] = [
     sugarPerServing: 17,
     fiberPerServing: 8,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/f3d7d80894409f15-Xpy1GEMF-zoom.jpg",
     category: 'fruits'
   },
@@ -457,6 +491,7 @@ export const products: Product[] = [
     sugarPerServing: 6,
     fiberPerServing: 14,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://myveganminimalist.com/wp-content/uploads/2023/08/Homemade-Dried-Lemons-How-To-Make-Lemon-Slices-9.jpg",
     category: 'fruits'
   },
@@ -470,6 +505,7 @@ export const products: Product[] = [
     sugarPerServing: 0,
     fiberPerServing: 0,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://arecipeforfun.com/wp-content/uploads/2024/01/Edits_Dehydrated-Lime-Wheels-8.jpg",
     category: 'fruits'
   },
@@ -483,6 +519,7 @@ export const products: Product[] = [
     sugarPerServing: 11,
     fiberPerServing: 8,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://m.media-amazon.com/images/I/71gf3AzjulL._AC_UF894,1000_QL80_.jpg",
     category: 'fruits'
   },
@@ -496,6 +533,7 @@ export const products: Product[] = [
     sugarPerServing: 3,
     fiberPerServing: 1,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://www.health.com/thmb/qnu3IaOfVlyuxpMPeDiojtjL5vM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1729805254-24c1ee76b2b7403e8c05d4063307b3ac.jpg",
     category: 'nuts'
   },
@@ -509,6 +547,7 @@ export const products: Product[] = [
     sugarPerServing: 1,
     fiberPerServing: 2,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/3013_RawMacadamiaNut-h-BVRqDE-zoom.jpg",
     category: 'nuts'
   },
@@ -522,6 +561,7 @@ export const products: Product[] = [
     sugarPerServing: 1,
     fiberPerServing: 2,
     price: 0.13,
+    bestPrice: 0.12,
     imageUrl: "https://media.post.rvohealth.io/wp-content/uploads/2020/08/pecans-732x549-thumbnail.jpg",
     category: 'nuts'
   },
@@ -535,6 +575,7 @@ export const products: Product[] = [
     sugarPerServing: 26,
     fiberPerServing: 2,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://nutsite.com/wp-content/uploads/2020/01/3113-Img-Red-Flame-Raisins-2.jpg",
     category: 'fruits'
   },
@@ -549,6 +590,7 @@ export const products: Product[] = [
     sugarPerServing: 0,
     fiberPerServing: 3,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://www.onegreenplanet.org/wp-content/uploads/2013/10/Sesame-Seeds-Health-Benefits-Tips-and-Recipes.jpg",
     category: 'seeds'
   },
@@ -563,6 +605,7 @@ export const products: Product[] = [
     sugarPerServing: 25,
     fiberPerServing: 3,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://m.media-amazon.com/images/I/81VFu5uhy3L._AC_UF350,350_QL80_.jpg",
     category: 'fruits'
   },
@@ -576,8 +619,37 @@ export const products: Product[] = [
     sugarPerServing: 0,
     fiberPerServing: 2,
     price: 0.55,
+    bestPrice: 0.50,
     imageUrl: "https://karibafarms.com/wp-content/uploads/2020/03/Brazil-Nuts.jpg",
     category: 'nuts'
+  },
+  {
+    id: 45,
+    name: "Container",
+    servingSize: 1,
+    caloriesPerServing: 0,
+    fatPerServing: 0,
+    proteinPerServing: 0,
+    sugarPerServing: 0,
+    fiberPerServing: 0,
+    price: 0.18,
+    bestPrice: 0.18,
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/3148/3148773.png",
+    category: 'packaging'
+  },
+  {
+    id: 46,
+    name: "Stickers",
+    servingSize: 1,
+    caloriesPerServing: 0,
+    fatPerServing: 0,
+    proteinPerServing: 0,
+    sugarPerServing: 0,
+    fiberPerServing: 0,
+    price: 0.14,
+    bestPrice: 0.07,
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/3097/3097144.png",
+    category: 'packaging'
   },
 ];
 
@@ -587,4 +659,5 @@ export const categoryLabels: Record<string, string> = {
   fruits: '🍇 Dried Fruits',
   sweeteners: '🍯 Sweeteners',
   other: '🥣 Other',
+  packaging: '📦 Container & Stickers',
 };
