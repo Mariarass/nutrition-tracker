@@ -38,8 +38,8 @@ export const products: Product[] = [
     proteinPerServing: 6,
     sugarPerServing: 1,
     fiberPerServing: 3,
-    price: 0.326,
-    bestPrice: 0.326,
+    price: 0.39,
+    bestPrice: 0.39,
     imageUrl: "https://nuts.com/images/ct/images.cdn.us-central1.gcp.commercetools.com/fe6ef66f-361c-4adb-b11f-d4aa8f13c79c/3004_RawAlmondsNoShe-Ke41eZKN-zoom.jpg",
     category: 'nuts'
   },
