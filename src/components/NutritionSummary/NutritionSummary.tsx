@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import html2canvas from 'html2canvas';
 import { NutritionTotals, Product, SelectedProducts } from '../../types/product';
 import { exportToExcel } from '../../utils/exportToExcel';
+import { NutritionLabel, type PerServingNutrients } from '../NutritionLabel';
 import styles from './NutritionSummary.module.css';
 
 interface NutritionSummaryProps {
@@ -25,6 +27,8 @@ export const NutritionSummary = ({
   onIncludeStickersChange,
 }: NutritionSummaryProps) => {
   const [barWeight, setBarWeight] = useState<number>(48);
+  const [servingsPerContainer, setServingsPerContainer] = useState<number | null>(null);
+  const labelRef = useRef<HTMLDivElement>(null);
 
   const formatNumber = (num: number, decimals: number = 2): string => {
     const fixed = num.toFixed(decimals);
@@ -35,6 +39,7 @@ export const NutritionSummary = ({
   const wholeBars = Math.floor(exactBars);
   const remainder = totals.totalWeight - (wholeBars * barWeight);
   const barRatio = barWeight / totals.totalWeight || 0;
+  const displayServings = servingsPerContainer ?? Math.max(1, Math.round(exactBars * 10) / 10);
 
   const perBar = {
     calories: totals.calories * barRatio,
@@ -44,6 +49,57 @@ export const NutritionSummary = ({
     fiber: totals.fiber * barRatio,
     price: totals.price * barRatio,
     bestPrice: totals.totalBestPrice * barRatio,
+  };
+
+  const perServingForLabel: PerServingNutrients = (() => {
+    const fat = totals.fat * barRatio;
+    const carb = ((totals.totalCarbohydrate ?? totals.sugar + totals.fiber) * barRatio);
+    const protein = totals.protein * barRatio;
+    const fiber = totals.fiber * barRatio;
+    const totalSugars = totals.sugar * barRatio;
+    const addedSugars = (totals.addedSugars ?? 0) * barRatio;
+    const potassiumRaw = (totals.potassium ?? 0) * barRatio;
+    const potassiumRounded = potassiumRaw % 1 === 0 ? potassiumRaw : Math.round(potassiumRaw);
+    return {
+      calories: totals.calories * barRatio,
+      totalFat: fat,
+      saturatedFat: (totals.saturatedFat ?? 0) * barRatio,
+      transFat: (totals.transFat ?? 0) * barRatio,
+      cholesterol: (totals.cholesterol ?? 0) * barRatio,
+      sodium: (totals.sodium ?? 0) * barRatio,
+      totalCarbohydrate: carb,
+      dietaryFiber: fiber,
+      totalSugars: totalSugars,
+      addedSugars,
+      protein,
+      vitaminD: (totals.vitaminD ?? 0) * barRatio,
+      calcium: (totals.calcium ?? 0) * barRatio,
+      iron: (totals.iron ?? 0) * barRatio,
+      potassium: potassiumRounded,
+      vitaminC: (totals.vitaminC ?? 0) * barRatio,
+      magnesium: (totals.magnesium ?? 0) * barRatio,
+    };
+  })();
+
+  const ingredientNames = Object.entries(selectedProducts)
+    .sort(([, a], [, b]) => b - a)
+    .map(([id]) => products.find((p) => p.id === parseInt(id))?.name)
+    .filter(Boolean) as string[];
+  const ingredientsText = ingredientNames.join(', ').toUpperCase();
+  const allergensSet = new Set<string>();
+  Object.keys(selectedProducts).forEach((id) => {
+    const p = products.find((pr) => pr.id === parseInt(id));
+    p?.allergens?.forEach((a) => allergensSet.add(a));
+  });
+  const containsText = Array.from(allergensSet).join(', ');
+
+  const handleDownloadLabelPNG = async () => {
+    if (!labelRef.current) return;
+    const canvas = await html2canvas(labelRef.current, { scale: 2, backgroundColor: '#ffffff' });
+    const link = document.createElement('a');
+    link.download = `nutrition-label-${new Date().toISOString().slice(0, 10)}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
   };
 
   return (
@@ -173,6 +229,23 @@ export const NutritionSummary = ({
             <span className={styles.barUnit}>g</span>
           </div>
         </div>
+        <div className={styles.barInputRow}>
+          <label className={styles.barLabel}>Servings per container:</label>
+          <div className={styles.barInputContainer}>
+            <input
+              type="number"
+              min="0.5"
+              step="0.5"
+              value={servingsPerContainer ?? (exactBars || '')}
+              onChange={(e) => {
+                const v = parseFloat(e.target.value);
+                setServingsPerContainer(e.target.value === '' || isNaN(v) ? null : v);
+              }}
+              placeholder={totals.totalWeight > 0 ? exactBars.toFixed(1) : '—'}
+              className={styles.barInput}
+            />
+          </div>
+        </div>
 
         <div className={styles.barResult}>
           <div className={styles.barCountCard}>
@@ -231,6 +304,32 @@ export const NutritionSummary = ({
           </>
         )}
       </div>
+
+      {/* Nutrition Label preview & Download PNG */}
+      {totals.totalWeight > 0 && (
+        <div className={styles.labelSection}>
+          <h3 className={styles.title}>🏷️ Nutrition Label</h3>
+          <div className={styles.labelPreviewRow}>
+            <NutritionLabel
+              ref={labelRef}
+              perServing={perServingForLabel}
+              servingSizeGrams={barWeight}
+              servingsPerContainer={displayServings}
+              ingredients={ingredientsText}
+              contains={containsText}
+            />
+            <div className={styles.labelActions}>
+              <button
+                type="button"
+                className={styles.downloadPngButton}
+                onClick={handleDownloadLabelPNG}
+              >
+                📥 Download PNG
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

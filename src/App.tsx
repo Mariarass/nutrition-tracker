@@ -96,7 +96,19 @@ function App() {
       sugar: 0,
       fiber: 0,
       price: 0,
-      totalBestPrice: 0
+      totalBestPrice: 0,
+      saturatedFat: 0,
+      transFat: 0,
+      cholesterol: 0,
+      sodium: 0,
+      totalCarbohydrate: 0,
+      addedSugars: 0,
+      vitaminD: 0,
+      calcium: 0,
+      iron: 0,
+      potassium: 0,
+      vitaminC: 0,
+      magnesium: 0,
     };
 
     Object.entries(selectedProducts).forEach(([productId, grams]) => {
@@ -108,9 +120,21 @@ function App() {
         totals.fat += product.fatPerServing * multiplier;
         totals.protein += product.proteinPerServing * multiplier;
         totals.sugar += product.sugarPerServing * multiplier;
-        totals.fiber += product.fiberPerServing * multiplier;
+        totals.fiber += (typeof product.dietaryFiberPerServing === 'number' ? product.dietaryFiberPerServing : typeof product.dietaryFiberPerServing === 'string' ? 0 : product.fiberPerServing) * multiplier;
         totals.price += product.price * multiplier;
         totals.totalBestPrice += product.bestPrice * multiplier;
+        totals.saturatedFat! += (product.saturatedFatPerServing ?? 0) * multiplier;
+        totals.transFat! += (product.transFatPerServing ?? 0) * multiplier;
+        totals.cholesterol! += (product.cholesterolPerServing ?? 0) * multiplier;
+        totals.sodium! += (product.sodiumPerServing ?? 0) * multiplier;
+        totals.totalCarbohydrate! += (product.totalCarbohydratePerServing ?? (product.sugarPerServing + product.fiberPerServing)) * multiplier;
+        totals.addedSugars! += (product.addedSugarsPerServing ?? 0) * multiplier;
+        totals.vitaminD! += (product.vitaminDPerServing ?? 0) * multiplier;
+        totals.calcium! += (product.calciumPerServing ?? 0) * multiplier;
+        totals.iron! += (product.ironPerServing ?? 0) * multiplier;
+        totals.potassium! += (product.potassiumPerServing ?? 0) * multiplier;
+        totals.vitaminC! += (product.vitaminCPerServing ?? 0) * multiplier;
+        totals.magnesium! += (product.magnesiumPerServing ?? 0) * multiplier;
       }
     });
 

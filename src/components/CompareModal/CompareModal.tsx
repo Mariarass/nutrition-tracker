@@ -43,7 +43,7 @@ export const CompareModal = ({ isOpen, onClose, selectedProducts, products }: Co
       case 'protein': return product.proteinPerServing * multiplier;
       case 'fat': return product.fatPerServing * multiplier;
       case 'sugar': return product.sugarPerServing * multiplier;
-      case 'fiber': return product.fiberPerServing * multiplier;
+      case 'fiber': return (typeof product.dietaryFiberPerServing === 'number' ? product.dietaryFiberPerServing : typeof product.dietaryFiberPerServing === 'string' ? 0 : product.fiberPerServing) * multiplier;
       case 'price': return product.price * multiplier;
       default: return 0;
     }

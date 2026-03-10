@@ -22,7 +22,7 @@ export function exportToExcel(
       Math.round(product.fatPerServing * mult * 100) / 100,
       Math.round(product.proteinPerServing * mult * 100) / 100,
       Math.round(product.sugarPerServing * mult * 100) / 100,
-      Math.round(product.fiberPerServing * mult * 100) / 100,
+      Math.round((typeof product.dietaryFiberPerServing === 'number' ? product.dietaryFiberPerServing : typeof product.dietaryFiberPerServing === 'string' ? 0 : product.fiberPerServing) * mult * 100) / 100,
       Math.round(product.price * mult * 100) / 100,
       Math.round(product.bestPrice * mult * 100) / 100,
     ]);

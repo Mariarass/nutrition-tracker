@@ -136,7 +136,13 @@ export const ProductItem = ({ product, isSelected, onToggle }: ProductItemProps)
               <Row label="Fat" value={`${product.fatPerServing} g`} />
               <Row label="Protein" value={`${product.proteinPerServing} g`} />
               <Row label="Sugar" value={`${product.sugarPerServing} g`} />
-              <Row label="Fiber" value={`${product.fiberPerServing} g`} />
+              <Row label="Fiber" value={`${product.dietaryFiberPerServing !== undefined ? String(product.dietaryFiberPerServing) : product.fiberPerServing} g`} />
+              <Row label="Vitamin D" value={`${product.vitaminDPerServing ?? 0} mcg`} />
+              <Row label="Calcium" value={`${product.calciumPerServing ?? 0} mg`} />
+              <Row label="Iron" value={`${product.ironPerServing ?? 0} mg`} />
+              <Row label="Potassium" value={`${product.potassiumPerServing ?? 0} mg`} />
+              <Row label="Vitamin C" value={`${product.vitaminCPerServing ?? 0} mg`} />
+              <Row label="Magnesium" value={`${product.magnesiumPerServing ?? 0} mg`} />
 
               <div className={`${styles.tooltipRow} ${styles.priceRow}`}>
                 <span className={styles.label}>Current price per serving:</span>

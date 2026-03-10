@@ -373,6 +373,48 @@
   letter-spacing: 0.03em;
 }
 
+/* Nutrition Label */
+.labelSection {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.labelSection .title {
+  margin-bottom: 16px;
+}
+
+.labelPreviewRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.labelActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.downloadPngButton {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+.downloadPngButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .summaryGrid {
