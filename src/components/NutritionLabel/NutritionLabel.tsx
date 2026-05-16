@@ -62,11 +62,11 @@ export const NutritionLabel = forwardRef<HTMLDivElement, NutritionLabelProps>(
 
 
         <div className={styles.servingsRow}>
-          3.5 serving{servingsPerContainer !== 1 ? 's' : ''} per container
+          {servingsPerContainer} serving{servingsPerContainer !== 1 ? 's' : ''} per container
         </div>
         <div className={styles.servingSizeRow}>
           <span className={styles.servingSizeLabel}>Serving size</span>
-          <span className={styles.servingSizeValue}> 3 balls ({servingSizeGrams}g)</span>
+          <span className={styles.servingSizeValue}>{servingSizeGrams}g</span>
         </div>
         <div className={styles.veryThickLine} />
         <div className={styles.amountPerServing}>Amount per serving</div>
